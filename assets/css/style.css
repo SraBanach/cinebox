@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header nav{
+    background-color: #f2f2f2;
+    /* primeiro valor em cima e embaixo , segundo valor laterais. 
+    caso tenha 4 valores ele pega todos os pontos cardenais em sentido horario; 
+    */
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{ 
+    text-decoration: none; /* tirar a linhada logo */
+    color: #011c26;
+    font-weight: bold;
+    cursor: pointer; /* colocar a maozinha na logo */
+}
+
+.menu, .menu-icones{ 
+    list-style: none; /* tirar a bolinha */
+    display: flex; /* deixa flexivel para conseguir mexer nas palavras */
+    gap: 5px; /* espaço entre as palavras do menu */
+}
+
+.menu li a, .menu-icones li a{ /* alterar o link que esta dentro da linha*/
+    text-decoration: none;
+    color:#011c26;
+/*    border:1px solid black; /* fica visivel o botao, era somente para teste
+    /* padding altera dentro o espaco que a palavra ocupa, margin altera o espaco entre as palavras */
+    padding:8px;
+    border-radius: 8px;
+}
+
+
+/* mouse estar por cima se chama hoover, mudar quando o mouse pasa em cima da palavra ou foto */ 
+.menu li a:hover, .menu-icones li a:hover{
+    background-color: #011c26;
+    color:white
+}
+
