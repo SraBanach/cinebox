@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinebox</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/carrossel.css">
+    <link rel="stylesheet" href="./assets/css/filmes.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <h1>Cine box</h1>
+            </a>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Filmes</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+
+            <ul class="menu-icones">
+                <li><a href="#"><i class="bi bi-search"></i></a></li>
+                <li><a href="#"><i class="bi bi-heart"></i></a></li>
+                <li><a href="#"><i class="bi bi-cart"></i></a></li>
+                <li><a href="#"><i class="bi bi-person-circle"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="banner"> 
+        <!-- id é sempre unico, não consigo alterar varios como na classe  -->
+        <main class="carrossel-container">
+            <img src="./assets/img/banner/banner_01.jpg" alt="Banner_01">
+
+            <section id="filmes_recomendados">
+                <h2 class="titulo"> Filmes </h2>
+                <main class = "container">
+                    <div class="row">
+                        <!-- Col - 3 é para ocupar 3 colunas  -->
+                        <div class="col col-3">
+                            <figure>
+                                <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
+                                <img src="./assets/img/poster/avatar-o-caminho-da-agua.png"
+                                alt="Poster do filme Avatar o caminho da agua"
+                                class="foto-produto">
+                                
+                                <figcaption>
+                                    <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
+                                    <h4>Avatar o caminho da agua</h4>
+                                    <!-- Span é algo generico para textos como se fosse uma div  -->
+                                    <span class="preco">R$15,90</span>
+                                    <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                                </figcaption>
+                                <span class="genero">
+                                    <label>Fantasia</label>
+                                    <label>Drama</label>
+                                    <label>Ficção</label>
+                                </span>
+
+                            </figure>
+                        </div>
+                        <div class="col col-3">Poster 2</div>
+                        <div class="col col-3">Poster 3</div>
+                        <div class="col col-3">Poster 4</div>
+                        <div class="col col-3"></div>
+                        <div class="col col-3">Poster 6</div>
+                        <div class="col col-3">Poster 7</div>
+                        <div class="col col-3">Poster 8</div>
+                    </div>
+
+                    
+                </main>
+            </section>
+
+
+        </main>
+    </section>
+
+</body>
+</html>
