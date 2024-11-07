@@ -15,5 +15,39 @@
 
     border: 2px solid #cccccc;
     border-radius: 10px;
+    /* overflow = aquilo que se passar aumenta  */
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel{ 
+    /* para fazer o carrosel ir para o lado*/
+    display: flex ; 
+    /* a cada 100% é uma imagem porque em banner img esta declarado como 100%  */
+    /* transform: translateX(-100%); */
+    /* ease in out é o tempo da animação  */
+    transition: transform 1s ease-in-out;
+}
+
+.carrossel-container>button{ 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+
+    transform: translateY(-50%);
+    /* posisao absolute é para a seta acompanhar o banner a tela pode mudar de tamanho que ele vai acompnhar. */
+    position: absolute;
+    top: 50%;
+}
+
+.carrossel-container>button.prev{
+    left: 10px;
+}
+
+.carrossel-container>button.next{ 
+    right: 10px;
 }
 
