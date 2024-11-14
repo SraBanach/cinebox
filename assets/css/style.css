@@ -13,7 +13,7 @@
 header nav{
     background-color: #f2f2f2;
     /* primeiro valor em cima e embaixo , segundo valor laterais. 
-    caso tenha 4 valores ele pega todos os pontos cardenais em sentido horario; 
+    caso tenha 4 valores ele pega todos os pontos cardenais em sentido horario top, direito , baixo e esquerda; 
     */
     padding: 30px 0;
     display: flex;
@@ -49,4 +49,66 @@ header nav{
     background-color: #011c26;
     color:white
 }
+
+button.menu-oculto{
+    border:none;
+    font-size: 2rem;
+    padding: 8px;
+    color: #011c26;
+    /* inherit é como se fosse se tem alguma coisa ai, reseta! */
+    /* None: esconde e remova - display */
+    /* hidden ele esconde - text decoration */
+    /* transparente deixa oculto */
+    background-color: inherit;
+}
+
+/* colocar tudo junto: é uma vid que tem uma classe junta */
+div.menu-oculto{ 
+    background-color: #210d36;
+    /* posicao mais fixa  */
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* todos estao na camada zero, se eu quero que fique a frente de tudo ele aumento esse valor  */
+    z-index: 1;
+
+    width: 0px;
+    /* overflow serve para esconder todo o lado x horizontal/  z é a altura; ele prensa */
+    /* tudo que sobrar que ficar a mais da largura ele vai esconder;  */
+    overflow-x: hidden;
+    padding-top: 60px;
+    /* tempo para aparecer a barra lateral quando chamada */
+    transition: 0.5s;
+    
+}
+
+div.menu-oculto a{ 
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* 32 px é o espaco na lateral */
+    /* quando tem 4 comandos ele pega sentido horario: top, left, baixo */
+    padding: 8px 8px 8px 32px;
+    /* para ocupar o bloco inteiro uso o block */
+    display: block;
+    /* tempo para aparecer as escritas do menu lateral */
+    transition: 0.3s;
+    color: #D9D9D9;
+}
+
+/* o ponto é o caminho absoluto! e quando tem espaço é porque tem dentro  */
+div.menu-oculto button.fechar{
+    /* para deixar ele solto do restante do menu eu uso a posicao absolut, com o absoluto ele some tb quando apertado x ou seja quando o width  do menu-oculto for = a 0 */
+    position: absolute;
+    top:0;
+    right: 20px;
+    font-size: 2rem;
+    background-color: inherit;
+    border: none; 
+    color: #D9D9D9;
+    padding: none;
+    /* tempo para aparecer o botao x  */
+    transition: 0.3s;
+}    
+
 
