@@ -1,7 +1,12 @@
 <!-- alt + shift + f: para organizar o codigo;  -->
 <!-- não consigo adicionar conteudo php dentro de html, porem dentro de arquivo php posso adicionar html; -->
 <!-- uma tag com uma linha só não precisa do ;  -->
-<?php include'./includes/header.php' ?>
+<!-- isset  = é um tipo de validação = se isso existe; é uma função -->
+
+<?php 
+$titulo = 'Cinebox-Inicio';
+include'./includes/header.php' 
+?>
 
 <section id="banner">
     <!-- id é sempre unico, não consigo alterar varios como na classe  -->
@@ -24,12 +29,15 @@
     <main class="container">
         <div class="row">
             <!-- Col - 3 é para ocupar 3 colunas  -->
+
+
+        <?php  for ($i=0; $i < 8 ; $i++) {?>        
+
             <div class="col col-3">
                 <figure>
                     <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
                     <img src="./assets/img/poster/avatar-o-caminho-da-agua.png"
                         alt="Poster do filme Avatar o caminho da agua" class="foto-produto">
-
                     <figcaption>
                         <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
                         <h4>Avatar o caminho da agua</h4>
@@ -47,189 +55,11 @@
                         <label style="background-color: #580259;">Drama</label>
                         <label style="background-color: #D966BA;">Ficção</label>
                     </span>
-
                 </figure>
             </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/gente-grande-2.png" alt="Poster do filme Gente grande 2"
-                        class="foto-produto">
+            <?php } ?>
+            
 
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>Gente Grande 2</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-
-                </figure>
-            </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/bad-boys-ate-o-fim.png" alt="Poster do filme bad bad-boys-ate-o-fim"
-                        class="foto-produto">
-
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>Bad Boys Até o Fim</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-
-                </figure>
-            </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/coringa-2.png" alt="Poster do filme coringa-2" class="foto-produto">
-
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>Coringa 2</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-
-                </figure>
-            </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/pulp-fiction.png" alt="Poster do filme pulp-fiction"
-                        class="foto-produto">
-
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>Pulp Fiction</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-
-                </figure>
-            </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/sem-tempo-para-morrer.png"
-                        alt="Poster do filme sem sem-tempo-para-morrer" class="foto-produto">
-
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>Sem tempo para morrer</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-
-                </figure>
-            </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/star-wars-the-last-jedi.png"
-                        alt="Poster do filme Star star-wars-the-last-jedi" class="foto-produto">
-
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>Star Wars the last Jedi</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-
-                </figure>
-            </div>
-            <div class="col col-3">
-                <figure>
-                    <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->
-                    <img src="./assets/img/poster/the-batman.png" alt="Poster do filme The the-batman"
-                        class="foto-produto">
-
-                    <figcaption>
-                        <!-- conteudo do card colocar o que esta logo abaixo da foto; -->
-                        <h4>The Batman</h4>
-                        <!-- Span é algo generico para textos como se fosse uma div  -->
-                        <span class="preco">R$15,90</span>
-                        <p class="descricao">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum."</p>
-                    </figcaption>
-                    <span class="genero">
-                        <label style="background-color: #070373;">Fantasia</label>
-                        <label style="background-color: #580259;">Drama</label>
-                        <label style="background-color: #D966BA;">Ficção</label>
-                    </span>
-                </figure>
-            </div>
         </div>
     </main>
 </section>
