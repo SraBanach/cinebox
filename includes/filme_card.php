@@ -1,3 +1,5 @@
+<!-- card modelo do para ser chamado -->
+
 <div class="col col-3">
                 <figure>
                     <!-- comeca com figure e logo depois coloca a imagem utilizada e depois comenta em figcapition -->

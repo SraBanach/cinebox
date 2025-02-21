@@ -1,3 +1,7 @@
+<!-- Filme lista sempre coloco filme _ o que aquele include esta fazendo, para facilitar na organização. 
+filme lista nesse caso serve para listar os cards que estao no banco;  -->
+
+
 <section id="filmes_recomendados">
     <h2 class="titulo"> Filmes </h2>
     <main class="container">
