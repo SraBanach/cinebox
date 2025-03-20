@@ -7,7 +7,9 @@ filme lista nesse caso serve para listar os cards que estao no banco;  -->
     <main class="container">
         <div class="row">
             <!-- Col - 3 é para ocupar 3 colunas  -->
-        <?php  for ($i=0; $i < 8 ; $i++) {        
+        <?php  
+        // for ($i=0; $i < 8 ; $i++) 
+        {        
             include './includes/filme_card.php';
         }?>
         </div>
