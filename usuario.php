@@ -1,5 +1,16 @@
 <?php
-include './includes/header.php';
+    include './includes/header.php';
+    // verificação se ele esta ou nao logado; 
+    // se o meu server esta com o metodo get e diferente vazio e o que esta dentro dele igual a true ele vai sair da sessao e me mandar para o index; 
+    if ($_SERVER['REQUEST_METHOD'] == 'GET' && !empty($_GET) && $_GET['sair'] == 'true') { 
+        session_destroy();
+        header('location:index.php');
+    }
+    // se ele NAO existe e se ele esta vazio ou seja se a pessoa sair ele me manda para a pagina login novamente; 
+    if ( !isset($_SESSION['id_pessoa']) && empty($_SESSION )) { 
+        header ('location:usuario-login.php');
+    }
+
 
 
 ?>

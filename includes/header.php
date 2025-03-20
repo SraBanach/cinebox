@@ -1,3 +1,7 @@
+<?php session_start ();?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,7 +51,7 @@
                 <li><a href="#"><i class="bi bi-search"></i></a></li>
                 <li><a href="#"><i class="bi bi-heart"></i></a></li>
                 <li><a href="#"><i class="bi bi-cart"></i></a></li>
-                <li><a href="./usuario-login.php"><i class="bi bi-person-circle"></i></a></li>
+                <li><a href="./usuario.php"><i class="bi bi-person-circle"></i></a></li>
             </ul>
             <!-- menu suspenso que vai ficar invisivel;  -->
             <!-- o botao ficou de fora pq ele sempre vai ficar aparecendo -->

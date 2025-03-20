@@ -3,7 +3,8 @@
 
 
 <div class="row">
-    <h4 class="identificacao">Bem vindo: Joaquim...</h4>
+    <!-- variavel $_SESSION criada no usuario-login, preciso avisar que tem uma sessao ativa;  -->
+    <h4 class="identificacao">Bem vindo: <?= $_SESSION['nome'] ?></h4>
 </div>
 <div class="row">
     <div class="col d-flex justify-content-between">
@@ -14,6 +15,7 @@
             <a href="#" class="mx-1 btn btn-roxo">Cad. Usuario</a>
             <a href="#" class="mx-1 btn btn-roxo">Config</a>
         </div>
-        <a href="#" class="btn btn-roxo">Sair</a>
+        <!-- interrogacao para separa arquivos de variavel link a href   -->
+        <a href="./usuario.php?sair=true" class="btn btn-roxo">Sair</a>
     </div>
 </div>

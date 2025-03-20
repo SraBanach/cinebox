@@ -4,7 +4,8 @@
 <!-- isset  = é um tipo de validação = se isso existe; é uma função -->
 <!-- classes e funcao sao obrigatorios, eles sao importantes;
 Arquivos require, ficam em primeiro lugar; -->
-<?php 
+<?php
+
 require './classes/Filmes.php';
 $titulo = 'Cinebox-Inicio';
 
