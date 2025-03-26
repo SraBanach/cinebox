@@ -1,4 +1,5 @@
 <?php
+    require './classes/Filmes.php';
     include './includes/header.php';
     // verificação se ele esta ou nao logado; 
     // se o meu server esta com o metodo get e diferente vazio e o que esta dentro dele igual a true ele vai sair da sessao e me mandar para o index; 
@@ -10,6 +11,10 @@
     if ( !isset($_SESSION['id_pessoa']) && empty($_SESSION )) { 
         header ('location:usuario-login.php');
     }
+
+    $filme = new Filmes();
+    //aqui pode ser qualquer nome de variavel o importante é que ela recebe filme e a funcao exibirListaFilmes colocar dentro de user_lista_filmes.php;
+    $resultadoConsultaFilmes = $filme->exibirListaFilmes();
 
 
 

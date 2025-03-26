@@ -4,6 +4,10 @@
 <!-- isset  = é um tipo de validação = se isso existe; é uma função -->
 <!-- classes e funcao sao obrigatorios, eles sao importantes;
 Arquivos require, ficam em primeiro lugar; -->
+
+<!-- porque a CLASSE é importante: quando tem a mesma linha de codigo no projeto, podendo ser ultilizado a classe; 
+como por exemplo a conexao com o banco, ele padroniza e deixa tudo em um arquivo só; 
+deixando funçoes ali dentro, agrupar tudo e deixa funcional -->
 <?php
 
 require './classes/Filmes.php';
@@ -18,9 +22,8 @@ include'./includes/banner.php';
 $filmes = new Filmes();
 
 //variavel dados, recebe a variavel filmes, que esta dentro de listarFilmesBanco;
-$dados = $filmes->listarFilmesBanco();
+$dadosFilmes = $filmes->exibirListaFilmes(8);
 
-echo $dados;
 
 include'./includes/filme_lista.php';
 

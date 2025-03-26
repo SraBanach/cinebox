@@ -12,6 +12,15 @@
         //pagina com o looping de filmes -->
 
 <?php      
+require './classes/Filmes.php';
+
+
 include'./includes/header.php';
+
+// dados filmes recebe o exibir lista filmes que esta no index; 
+$filme = new Filmes();
+$dadosFilmes = $filme->exibirlistaFilmes();
+
+
 include'./includes/filme_lista.php';
 include'./includes/footer.php';
