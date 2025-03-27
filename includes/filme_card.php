@@ -1,6 +1,6 @@
 
 <div class="col-lg-<?= isset($qntd) ? $qntd : 3 ?> col-md6 col-sm-12">
-    <a href="./includes/filmes_detalhe.php"> 
+    <a href="./includes/filmes_consultar.php <?= $value['id'] ?>"> 
     <figure>
                         <!-- se começa primeiro a tag  figure para prossegir com o figcapture  -->
         <img src="./assets/img/poster/<?php echo $value['poster'] ?>"
