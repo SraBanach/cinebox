@@ -11,6 +11,8 @@ deixando funçoes ali dentro, agrupar tudo e deixa funcional -->
 <?php
 
 require './classes/Filmes.php';
+require './classes/Generos.php';
+
 $titulo = 'Cinebox-Inicio';
 
 include'./includes/header.php';
@@ -23,6 +25,13 @@ $filmes = new Filmes();
 
 //variavel dados, recebe a variavel filmes, que esta dentro de listarFilmesBanco;
 $dadosFilmes = $filmes->exibirListaFilmes(8);
+
+//-----------------------------------------------
+
+$genero = new Generos(); 
+//pessoa sua tarefa é preparar todos os pedidos e colocar na janela
+//ele ja esta esperando os dados generos que ja esta dentro de filmes_filtro
+$dadosGeneros = $genero->consultarListaGeneros();
 
 
 include'./includes/filme_lista.php';
