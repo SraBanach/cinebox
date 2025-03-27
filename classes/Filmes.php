@@ -18,14 +18,30 @@ class Filmes{
 //aqio no caso entao $limite não é obrigatorio, assim funciona mesmo sem parametros;
 //posso passar parametros diferentes em paginas diferentes; 
 
+public $conexaoBanco;
+
+
+//toda vez que eu chamar qualquer funcao abaixo, ele vai fazer o construct
+//construi para o site todo.
+//criar uma variavel global e posso ultilizar ela durante todo o meu site. 
+public function __construct(){
+
+    $dsn = 'mysql:dbname=db_cinebox;host=127.0.0.1';
+    $user = 'root';
+    $password = '';
+
+    //conexao com o banco, se estiver como variavel ele cria um novo por estar dentro de uma funcao.
+    //então para conectar a variavel public acima ele precisa do this; 
+    // this para avisar de onde esta vindo a conexao com o banco
+    $this->conexaoBanco = new PDO($dsn, $user, $password);
+}
+
+
+
     public function exibirListaFilmes ($limite ='') { 
-        $dsn = 'mysql:dbname=db_cinebox;host=127.0.0.1';
-        $user = 'root';
-        $password = '';
+
         //auxilio para a minha condição do if
         $auxScript = '';
-
-        $banco = new PDO($dsn, $user, $password);
 
         //criar as regas sempre entre o banco e o script
 
@@ -39,7 +55,18 @@ class Filmes{
         //. para contatenar
         $script = 'SELECT* FROM tb_filmes' .$auxScript;
 
-        return $banco->query($script)-> fetchAll();
+        return $this->conexaoBanco->query($script)->fetchAll();
+    }
+
+
+    public function detalhesFilmes (){ 
+
+        $script = 'SELECT* FROM tb_filmes';
+
+        return $this->conexaoBanco->query($script)->fetchAll();
+
+
+
     }
     
     

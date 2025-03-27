@@ -5,7 +5,7 @@
                 <!-- passando o form como get, poderia ser tb como post  -->
                 <form action="#" method="get" class="filtro">
                     <!-- foreache em uma variavel genero, passando todos como value; 
-                     se existir o get do value eu vou marcar ele como check, se ele nao estiver marcado eu nao faço nada --> -->
+                    se existir o get do value eu vou marcar ele como check, se ele nao estiver marcado eu nao faço nada --> -->
                     <?php foreach ($dadosGeneros as $value) { ?>
                         <label for="<?= $value['nome'] ?>" class="label">
                             <input
