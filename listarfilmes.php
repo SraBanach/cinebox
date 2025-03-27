@@ -13,14 +13,24 @@
 
 <?php      
 require './classes/Filmes.php';
+require './classes/Generos.php';
 
 
 include'./includes/header.php';
 
-// dados filmes recebe o exibir lista filmes que esta no index; 
+// dados (pessoa recebe uma funcao) filmes recebe o exibir lista filmes que esta no index; 
 $filme = new Filmes();
+//pessoa sua tarefa é preparar todos os pedidos e colocar na janela
+//ele ja esta esperando os dados generos que ja esta dentro de filmes_filtro
 $dadosFilmes = $filme->exibirlistaFilmes();
 
+//------------------------------------
 
-include'./includes/filme_lista.php';
+$genero = new Generos(); 
+//pessoa sua tarefa é preparar todos os pedidos e colocar na janela
+//ele ja esta esperando os dados generos que ja esta dentro de filmes_filtro
+$dadosGeneros = $genero->consultarListaGeneros();
+
+
+include'./includes/filmes_filtro.php';
 include'./includes/footer.php';

@@ -13,6 +13,8 @@ filme lista nesse caso serve para listar os cards que estao no banco;  -->
         // for ($i=0; $i < 8 ; $i++)  -->
             <!-- dadosFilmes esta no index, foi criado la -->
             <?php foreach ($dadosFilmes as $value) {  
+                $generosFilmes = $genero->consultarGeneroByIdFilme($value['id']);
+
             include './includes/filme_card.php';
         } ?>
         </div>

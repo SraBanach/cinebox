@@ -2,15 +2,19 @@
     <main class="container">
         <div class="row">
             <div class="col-2 col-lg-2 col-xs-12">
-
+                <!-- passando o form como get, poderia ser tb como post  -->
                 <form action="#" method="get" class="filtro">
+                    <!-- foreache em uma variavel genero, passando todos como value; 
+                     se existir o get do value eu vou marcar ele como check, se ele nao estiver marcado eu nao faço nada --> -->
                     <?php foreach ($dadosGeneros as $value) { ?>
                         <label for="<?= $value['nome'] ?>" class="label">
                             <input
                                 id="<?= $value['nome'] ?>"
                                 name="<?= $value['nome'] ?>"
-                                type="checkbox" <?= isset($_GET[$value['nome']]) ? 'checked' : '' ?>>
-                            <div class="checkmark"></div>
+                                type="checkbox"
+                                
+                                <?= isset($_GET[$value['nome']]) ? 'checked' : '' ?>>
+                            <div class="checkmark"></div> 
                             <?= $value['nome'] ?>
                         </label>
                     <?php } ?>
@@ -20,7 +24,7 @@
             </div>
             <div class="col-10 col-lg-10 col-xs-12">
                 <?php $qntd = 4;
-                include './includes/filmes_listar.php'; ?>
+                include './includes/filme_lista.php'; ?>
             </div>
         </div>
     </main>
